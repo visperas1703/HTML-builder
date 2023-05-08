@@ -21,6 +21,10 @@ stdin.on('data', data => {
 }
 );
 
+process.on('SIGINT', function closeText() {
+    console.log('До свидания!');
+    process.exit();
+  });
 
 
 
